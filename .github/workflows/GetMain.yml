@@ -41,5 +41,7 @@ jobs:
           df -h
       - name: Get Level 1 map
         run: |
-          apt update
-          apt install python3
+          sudo apt update
+          sudo apt-get install -y curl
+          curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
+          sudo apt-get install -y nodejs
