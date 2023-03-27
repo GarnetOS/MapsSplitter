@@ -44,12 +44,14 @@ jobs:
           sudo apt update
           sudo apt-get install -y curl
           curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
-          sudo apt-get install -y nodejs
+          sudo apt-get install -y nodejs python3 python3-pip
           npm install -g query-overpass
           export x1=$((${{matrix.lon}}*180))
           export x2=$(((${{matrix.lon}}+1)*180))
           export y1=$((${{matrix.lat}}*90))
           export y2=$(((${{matrix.lat}}+1)*90))
           #echo 'nwr($x1,$y1,$x2,$y2);out;' | query-overpass --overpass-url https://overpass.kumi.systems/api/interpreter
-          echo 'nwr(0,0,1,1);out;' | query-overpass --overpass-url https://overpass.kumi.systems/api/interpreter > out.geojson
+          #echo 'nwr(0,0,1,1);out;' | query-overpass --overpass-url https://overpass.kumi.systems/api/interpreter > out.geojson
+          pip install overpass
+          overpass 'nwr(0,0,1,1);out;' json.json
           ls -l
