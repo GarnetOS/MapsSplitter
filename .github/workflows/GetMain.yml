@@ -51,4 +51,5 @@ jobs:
           export y1=$((${{matrix.lat}}*90))
           export y2=$(((${{matrix.lat}}+1)*90))
           #echo 'nwr($x1,$y1,$x2,$y2);out;' | query-overpass --overpass-url https://overpass.kumi.systems/api/interpreter
-          echo 'nwr(0,0,1,1);out;' | query-overpass --overpass-url https://overpass.kumi.systems/api/interpreter
+          echo 'nwr(0,0,1,1);out;' | query-overpass --overpass-url https://overpass.kumi.systems/api/interpreter > out.geojson
+          ls -l
