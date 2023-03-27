@@ -53,7 +53,7 @@ jobs:
           #echo 'nwr($x1,$y1,$x2,$y2);out;' | query-overpass --overpass-url https://overpass.kumi.systems/api/interpreter
           #echo 'nwr(0,0,1,1);out;' | query-overpass --overpass-url https://overpass.kumi.systems/api/interpreter > out.geojson
           pip3 install virtualenv pip wheel setuptools requests
-          curl https://bootstrap.pypa.io/ez_setup.py -o - | python
+          #curl https://bootstrap.pypa.io/ez_setup.py -o - | python
           /usr/bin/easy_install virtualenv
           virtualenv .env
           source .env/bin/activate
