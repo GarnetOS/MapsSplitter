@@ -55,5 +55,5 @@ jobs:
           sudo pip install overpass
           pip3 -V
           export PATH="/usr/lib/python3/dist-packages:$PATH"
-          overpass 'nwr(0,0,1,1);out;' json.json
+          usr/lib/python3/dist-packages/overpass 'nwr(0,0,1,1);out;' json.json
           ls -l
