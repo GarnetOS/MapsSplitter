@@ -60,5 +60,5 @@ jobs:
           pip3 install overpass
           pip3 -V
           tree /home/runner/work/MapsSplitter/MapsSplitter/.env/lib/python3.10/site-packages
-          overpass 'nwr(0,0,1,1);out;' json.json
+          python /home/runner/work/MapsSplitter/MapsSplitter/.env/lib/python3.10/site-packages/overpass/__init__.py 'nwr(0,0,1,1);out;' json.json
           ls -l
